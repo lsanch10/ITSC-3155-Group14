@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1{
-    position: center;
     
+    position: center;
+    background-color: #ff8000;
+    text-align: center;
+    color: blue;
+}
+body{
+    background-image: url("pumpkin.gif");
+    background-size: 1000px 900px;
+    color: white;
 }
