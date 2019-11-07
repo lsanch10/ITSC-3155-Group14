@@ -1,1 +1,33 @@
 <h1>New Client</h1>
+<%= form_for :client, url: clients_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+ <p>
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+     <p>
+    <%= f.label :court_date %><br>
+    <%= f.text_field :court_date %>
+  </p>
+  <p> 
+    <%= f.label :case_description %><br>
+    <%= f.text_area :case_description %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
