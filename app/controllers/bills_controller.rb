@@ -1,7 +1,17 @@
 class BillsController < ApplicationController
+    def show
+        @bill = Bill.find(params[:id])
+    end
     def new
     end
     def create
-        render plain: params[:bill].inspect
+        @bill = Bill.new(bill_params)
+        
+        @bill.save
+        redirect_to @bill
     end
+end
+private
+def bill_params
+    params.require(:bill).permit(:name, :address,:date,:description,:wage,:hours)
 end
