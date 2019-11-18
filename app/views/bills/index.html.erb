@@ -1,0 +1,16 @@
+<h1>Listing bills</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @bill.each do |bill| %>
+    <tr>
+      <td><%= bill.name %></td>
+      <td><%= bill.description %></td>
+      <td><%= link_to 'Show', bill_path(bill) %></td>
+    </tr>
+  <% end %>
+</table>

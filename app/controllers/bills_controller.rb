@@ -1,4 +1,7 @@
 class BillsController < ApplicationController
+    def index
+        @bill = Bill.all
+    end
     def show
         @bill = Bill.find(params[:id])
     end
