@@ -10,19 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2019_11_17_233001) do
 
-ActiveRecord::Schema.define(version: 2019_11_07_153958) do
-
-  create_table "clients", force: :cascade do |t|
-    t.string "Name"
-    t.string "Address"
-    t.string "Phone_Number"
-    t.string "Email"
-    t.string "Court_Date"
-    t.text "Case_Description"
-  end
-
-create_table "bills", force: :cascade do |t|
+  create_table "bills", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.string "date"
@@ -32,6 +22,16 @@ create_table "bills", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-  
+
+  create_table "clients", force: :cascade do |t|
+    t.string "Name"
+    t.string "Address"
+    t.string "Phone_Number"
+    t.string "Email"
+    t.string "Court_Date"
+    t.text "Case_Description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
