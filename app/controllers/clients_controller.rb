@@ -29,6 +29,12 @@ class ClientsController < ApplicationController
             render 'edit'
         end
     end
+    def destroy
+        @client = Client.find(params[:id])
+        @client.destroy
+        
+        redirect_to clients_path
+    end
     
 end
 private 
