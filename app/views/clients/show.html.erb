@@ -11,3 +11,10 @@
     <strong>Case Description:</strong>
     <%= @client.Case_Description %>
 </p>
+ 
+
+<%= link_to 'Edit', edit_client_path(@client) %><br>
+<%= link_to 'Delete', client_path(@client),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %><br>
+<%= link_to 'Client List', clients_path %>

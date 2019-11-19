@@ -1,0 +1,36 @@
+<h1>New Bill</h1>
+<%= form_for :bill, url:bills_path do |f| %>
+ 
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </p>
+  
+ 
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :rate %><br>
+    <%= f.text_field :rate %>
+  </p>
+  <p>
+    <%= f.label :hours %><br>
+    <%= f.text_field :hours %>
+  </p>
+  
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
