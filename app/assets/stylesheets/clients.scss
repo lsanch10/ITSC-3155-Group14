@@ -1,12 +1,32 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1{
+tr{
     
     position: center;
     background-color: #ffffff;
     text-align: center;
     color: blue;
+    padding-left: 50px;
+    padding-right: 10px;
+}
+th{
+    
+    position: center;
+    background-color: #ffffff;
+    text-align: center;
+    color: blue;
+    padding-left: 50px;
+    padding-right: 10px;
+}
+td{
+    
+    position: center;
+    background-color: #ffffff;
+    text-align: center;
+    color: blue;
+    padding-left: 50px;
+    padding-right: 10px;
 }
 /* Bordered form */
 form {

@@ -1,9 +1,9 @@
 <h1>Listing Clients</h1>
 <table>
     <tr>
-        <th>Name</th>
-        <th>Case Descritpion</th>
-    </tr>
+        <th>Name</th><br>
+        <th>Case Description</th>
+    <tr>
     <% @client.each do |client| %>
     <tr>
         <td><%= link_to client.Name, client_path(client) %></td>
