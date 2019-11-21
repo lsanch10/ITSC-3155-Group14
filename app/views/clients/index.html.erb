@@ -1,15 +1,23 @@
-<h1>Listing Clients</h1>
-<button type="new"><%= link_to'New Client', new_client_path%></button>
-<div class="listing">
-<table>
+<h1>Client List</h1>
+<br><br>
+<table class="center">
     <tr>
-        <th>Name</th><br>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Court Date</th>
         <th>Case Description</th>
-    <tr>
+    </tr>
     <% @client.each do |client| %>
     <tr>
         <td><%= link_to client.Name, client_path(client) %></td>
-        <td><%= client.Case_Description %></td>
+        <td><%= link_to client.Address, client_path(client) %></td>
+        <td><%= link_to client.Phone_Number, client_path(client) %></td>
+        <td><%= link_to client.Email, client_path(client) %></td>
+        <td><%= link_to client.Court_Date, client_path(client) %></td>
+        <td><%= link_to client.Case_Description, client_path(client) %></td>
+        
     </tr>
     <%end%>
     

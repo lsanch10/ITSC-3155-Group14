@@ -1,105 +1,27 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-tr{
-    position: center;
-    background-color: #ffffff;
-    text-align: center;
+h1 {
     color: blue;
-    padding-left: 50px;
-    padding-right: 10px;
-}
-
-th{
-    position: center;
-    background-color: #ffffff;
+    font-size: 46px;
     text-align: center;
-    color: blue;
-    padding-left: 50px;
-    padding-right: 10px;
 }
-
-td{
-    position: center;
-    background-color: #ffffff;
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+}
+th {
+    color: black;
+    font-size: 28px;
+    padding: 28px 28px;
     text-align: center;
-    color: blue;
-    padding-left: 50px;
-    padding-right: 10px;
+    border-bottom: 1px solid #ddd;
 }
-
-p{
-    position: center;
-    background-color: #ffffff;
+td {
+    color: black;
+    font-size: 20px;
     text-align: center;
-    color: blue;
-    padding-left: 50px;
-    padding-right: 10px;
 }
-#listing{
-    position: center;
-    background-color: #ffffff;
-    text-align: center;
-    color: blue;
-    padding-left: 50px;
-    padding-right: 10px;
-}
-/* Bordered form */
-form {
-  border: 3px solid #f1f1f1;
-}
-
-/* Full-width inputs */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-}
-
-/* The "Forgot password" text */
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
-    width: 100%;
-  }
+tr {
+    tr:hover {background-color: f5f5f5;}
 }
