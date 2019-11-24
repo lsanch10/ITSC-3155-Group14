@@ -1,17 +1,22 @@
 class BillsController < ApplicationController
+    
     def index
         @bill = Bill.all
     end
     def show
-        @bill = Bill.find(params[:id])
+         @client = Client.find(params[:client_id])
+        @bill = @client.bill.find(params[:id])
     end
     def new
     end
     def create
-        @bill = Bill.new(bill_params)
+         @client = Client.find(params[:client_id])
+         @bill = @client.bill.create(bill_params)
+       # @bill = bill.find(params[:bill_id])
+       #  @bill = Bill.new(bill_params)
         
-        @bill.save
-        redirect_to @bill
+         @bill.save
+        redirect_to client_path(@client)
     end
 end
 private
