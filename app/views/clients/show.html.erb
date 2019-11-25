@@ -1,0 +1,20 @@
+<p>
+    <strong>Name:</strong>
+    <%= @client.Name %>
+</p>
+
+<p>
+    <strong>Court Date:</strong>
+    <%= @client.Court_Date %>
+</p>
+<p>
+    <strong>Case Description:</strong>
+    <%= @client.Case_Description %>
+</p>
+ 
+<%= link_to 'New Bill', new_client_bill_path(@client) %><br>
+<%= link_to 'Edit', edit_client_path(@client) %><br>
+<%= link_to 'Delete', client_path(@client),
+                      method: :delete,
+                      data: { confirm: 'Your Client will be permenantly deleted do you wish to continue' } %><br>
+<%= link_to 'Client List', clients_path %>

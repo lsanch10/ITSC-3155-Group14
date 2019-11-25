@@ -23,4 +23,15 @@ ActiveRecord::Schema.define(version: 2019_11_17_233001) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "clients", force: :cascade do |t|
+    t.string "Name"
+    t.string "Address"
+    t.string "Phone_Number"
+    t.string "Email"
+    t.string "Court_Date"
+    t.text "Case_Description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
