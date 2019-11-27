@@ -12,9 +12,9 @@
     <%= @client.Case_Description %>
 </p>
  
-
+<%= link_to 'New Bill', new_bill_path %><br>
 <%= link_to 'Edit', edit_client_path(@client) %><br>
 <%= link_to 'Delete', client_path(@client),
                       method: :delete,
-                      data: { confirm: 'Are you sure?' } %><br>
+                      data: { confirm: 'Your Client will be permenantly deleted do you wish to continue' } %><br>
 <%= link_to 'Client List', clients_path %>
