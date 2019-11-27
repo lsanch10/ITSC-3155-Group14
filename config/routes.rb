@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get 'landing/index'
   get 'welcome/index'
-  resources :clients
-  resources :bills
+  resources :clients do
+    resources :bills
+  end
   root 'welcome#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
