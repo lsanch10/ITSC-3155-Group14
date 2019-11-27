@@ -1,43 +1,14 @@
 <h1>Client List</h1>
+
+<div id="new_client">
 <%= link_to'New Client', new_client_path%>
 <br><br>
-<table class="center">
-    <tr>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Phone Number</th>
-        <th>Email</th>
-        <th>Court Date</th>
-        <th>Case Description</th>
-    </tr>
-    <% @client.each do |client| %>
-    <tr>
-        <td><%= link_to client.Name, client_path(client) %></td>
-        <td><%= link_to client.Address, client_path(client) %></td>
-        <td><%= link_to client.Phone_Number, client_path(client) %></td>
-        <td><%= link_to client.Email, client_path(client) %></td>
-        <td><%= link_to client.Court_Date, client_path(client) %></td>
-        <td><%= link_to client.Case_Description, client_path(client) %></td>
-        
-    </tr>
-    <%end%>
-    
-</table>
 </div>
 
-
-
-
-
-<!DOCTYPE html>
-<html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
 
+<body>
 <div class="w3-container">
-  <h2>Tabs in a Grid</h2>
 
   <div class="w3-row">
     <a href="javascript:void(0)" onclick="opentab(event, 'Client');">
@@ -49,16 +20,32 @@
   </div>
 
   <div id="Client" class="w3-container tab" style="display:none">
-    <h2>Client</h2>
-    <p>Client is the capital tab of England.</p>
+    <table class="center">
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Court Date</th>
+        <th>Case Description</th>
+      </tr>
+    <% @client.each do |client| %>
+      <tr>
+        <td><%= link_to client.Name, client_path(client) %></td>
+        <td><%= link_to client.Address, client_path(client) %></td>
+        <td><%= link_to client.Phone_Number, client_path(client) %></td>
+        <td><%= link_to client.Email, client_path(client) %></td>
+        <td><%= link_to client.Court_Date, client_path(client) %></td>
+        <td><%= link_to client.Case_Description, client_path(client) %></td>
+        
+      </tr>
+    <%end%>
+    </table>
   </div>
 
   <div id="Bill" class="w3-container tab" style="display:none">
-    <h2>Bill</h2>
-    <p>Bill is the capital of France.</p> 
+    <p>Link to bill_path? Not sure how to implement this part.</p> 
   </div>
-</div>
-
 <script>
 function opentab(evt, tabName) {
   var i, x, tablinks;
@@ -68,10 +55,10 @@ function opentab(evt, tabName) {
   }
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+    tablinks[i].className = tablinks[i].className.replace(" w3-border-green", "");
   }
   document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-border-red";
+  evt.currentTarget.firstElementChild.className += " w3-border-green";
 }
 </script>
 
