@@ -1,25 +1,35 @@
 class BillsController < ApplicationController
     
-    def index
-        @bill = Bill.all
-    end
+    
+    
     def show
-         @client = Client.find(params[:client_id])
-        @bill = @client.bill.find(params[:id])
+        @client = Client.find(params[:clientid])
+        @bill = @client.bills.find(params[:id])
     end
-    def new
-    end
+    
+    
     def create
-         @client = Client.find(params[:client_id])
-         @bill = @client.bill.create(bill_params)
-       # @bill = bill.find(params[:bill_id])
-       #  @bill = Bill.new(bill_params)
-        
-         @bill.save
-        redirect_to client_path(@client)
+    @client = Client.find(params[:client_id])
+    
+    @bill = @client.bills.create(bill_params)
+   
+    redirect_to client_path(@client)
     end
-end
-private
-def bill_params
-    params.require(:bill).permit(:name, :address,:date,:description,:wage,:hours)
+    def destroy
+           @client = Client.find(params[:client_id])
+           @bill = @client.bills.find(params[:id])
+           @bill.destroy
+           redirect_to client_path(@client)
+    end
+        
+    
+    
+    private 
+        def bill_params
+            params.require(:bill).permit(:name,:address,:date,:description,:rate,:hours)
+        end
+    
+    
+    
+    
 end

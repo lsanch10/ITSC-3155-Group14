@@ -9,13 +9,21 @@
     <tr>
         <td><%= link_to client.Name, client_path(client) %></td>
         <td><%= client.Case_Description %></td>
-       
+         
+     
     </tr>
     <%end%>
- 
+ </table>
 
     
+<!--Still Need to figure out had to add the Bill List-->
+    
+<h1>Listing Bills</h1>
+    
+    <% @client.each do |client| %>
    
+        <%= render client.bills %>
+     
     
-    
-</table>
+    <%end%>
+ 

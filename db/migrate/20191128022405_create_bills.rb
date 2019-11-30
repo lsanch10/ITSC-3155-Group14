@@ -3,11 +3,11 @@ class CreateBills < ActiveRecord::Migration[5.2]
     create_table :bills do |t|
       t.string :name
       t.string :address
-      t.string :date
+      t.date :date
       t.text :description
-      t.string :rate
-      t.string :hours
-      t.refrences :client, foreign_key: true
+      t.decimal :rate
+      t.integer :hours
+      t.references :client, foreign_key: true
 
       t.timestamps
     end

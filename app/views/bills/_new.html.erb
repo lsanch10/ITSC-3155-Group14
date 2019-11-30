@@ -1,11 +1,9 @@
 <h1>New Bill</h1>
-
-<%= form_for :bill, url: client_bills_path do |f| %>
+<%= form_for([@client, @client.bills.build]) do |f| %>
  
   <p>
     <%= f.label :name %><br>
-     <%= f.text_field :name  %>
-   
+    <%= f.text_field :name %>
   </p>
   <p>
     <%= f.label :address %><br>
@@ -36,3 +34,4 @@
   </p>
  
 <% end %>
+© 2019 GitHub, Inc.
