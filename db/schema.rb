@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(version: 2019_11_17_233001) do
     t.text "description"
     t.string "rate"
     t.string "hours"
+    t.integer "client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_bills_on_client_id"
   end
 
   create_table "clients", force: :cascade do |t|

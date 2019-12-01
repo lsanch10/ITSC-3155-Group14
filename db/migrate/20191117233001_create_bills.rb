@@ -7,7 +7,7 @@ class CreateBills < ActiveRecord::Migration[5.2]
       t.text :description
       t.string :rate
       t.string :hours
-      t.refrences :client, foreign_key: true
+      t.references :client, foreign_key: true
 
       t.timestamps
     end
