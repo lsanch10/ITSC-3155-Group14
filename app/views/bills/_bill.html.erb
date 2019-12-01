@@ -1,0 +1,19 @@
+<p>
+    <strong>Name:</strong>
+    <%= bill.name %>
+</p>
+
+<p>
+    <strong>Date:</strong>
+    <%= bill.date %>
+</p>
+
+
+
+<p>
+    <%= link_to 'Delete Bill ', [bill.client, bill],
+                 method: :delete,
+                 data: {confirm: 'Are you sure?'} %>
+</p>
+
+   

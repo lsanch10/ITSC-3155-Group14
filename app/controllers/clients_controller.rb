@@ -1,4 +1,5 @@
 class ClientsController < ApplicationController
+  
    
     def index
         @client = Client.all
@@ -12,7 +13,7 @@ class ClientsController < ApplicationController
     
     def create
         @client = Client.new(client_params)
-        
+        @client.user = current_user
         if @client.save
            redirect_to @client
         else

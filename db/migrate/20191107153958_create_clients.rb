@@ -4,8 +4,8 @@ class CreateClients < ActiveRecord::Migration[5.2]
       t.string :Name
       t.string :Address
       t.string :Phone_Number
-      t.string :Email
-      t.string :Court_Date
+      t.stirng :Email
+      t.date :Court_Date
       t.text :Case_Description
 
       t.timestamps

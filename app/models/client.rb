@@ -1,4 +1,6 @@
 class Client < ApplicationRecord
+    belongs_to :user
+    
     has_many :bills
     validates :Name, presence: true, length: { minimum: 1 }
     validates :Address, presence: true, length: { minimum: 5 }

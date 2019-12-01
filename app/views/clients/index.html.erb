@@ -1,5 +1,9 @@
 <h1>Listing Clients</h1>
 <%= link_to'New Client', new_client_path%>
+<% if current_user %>
+      Logged in as <%= current_user.name%>
+     <%=button_to "Logout", logout_path, :id => "logoutbtn" %>
+<% end %>
 <table>
     <tr>
         <th>Name</th>
@@ -9,12 +13,21 @@
     <tr>
         <td><%= link_to client.Name, client_path(client) %></td>
         <td><%= client.Case_Description %></td>
-        
+         
+     
     </tr>
     <%end%>
+ </table>
+
     
+<!--Still Need to figure out had to add the Bill List-->
     
+<h1>Listing Bills</h1>
+    
+    <% @client.each do |client| %>
    
+        <%= render client.bills %>
+     
     
-    
-</table>
+    <%end%>
+ 
