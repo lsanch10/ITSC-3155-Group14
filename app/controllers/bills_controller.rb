@@ -21,6 +21,8 @@ class BillsController < ApplicationController
            @bill.destroy
            redirect_to client_path(@client)
     end
+    
+   
         
     
     

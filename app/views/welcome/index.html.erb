@@ -1,43 +1,18 @@
-<p id="alert"><%= alert %></p>
 <h1>Law Firm App</h1>
+<form action="welcome.php" method="post">
 
   <div class="container">
-    <!--<label for="username"><b>Username</b></label>-->
-    <!--<input type="text" placeholder="Enter Username" name="username" required>-->
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
 
-    <!--<label for="password"><b>Password</b></label>-->
-    <!--<input type="password" placeholder="Enter Password" name="password" required>-->
-    
-<%= form_tag sessions_path, url: clients_path do |form|%>
-    <div class='"field'>
-        <%= label_tag :email %>
-        <%= text_field_tag :email %>
-    </div>
-    <div class="field">
-       <%= label_tag :password%>
-       <%= password_field_tag :password %>
-    </div>
-    <div class="actions">
-       <%= submit_tag "Login", :id => "loginbtn" %>
-    </div>
-     <% if current_user %>
-      Logged in as <%= current_user.name%>
-     <%=button_to "Logout", logout_path %>
-    <% else %>
-     
-      <%= link_to "Sign Up", signup_path %>
-    <% end %>
-<% end %>
-    
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
 
-    <!--<button type="submit">Login</button>-->
-    <!--<button type="signup">Sign Up</button>-->
-   
-    
-   <label>
-     <input type="checkbox" checked="checked" name="remember"> Remember me
+    <button type="submit">Login</button>
+    <button type="signup">Sign Up</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-    
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
