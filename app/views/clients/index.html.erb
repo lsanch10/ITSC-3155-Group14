@@ -1,9 +1,10 @@
 <h1>Listing Clients</h1>
-<%= link_to'New Client', new_client_path%>
 <% if current_user %>
       Logged in as <%= current_user.name%>
-     <%=button_to "Logout", logout_path, :id => "logoutbtn" %>
+     <%= link_to "Logout", sessions_destroy_path, :id => "logoutbtn" %>
 <% end %>
+
+<br><br><%= link_to'New Client', new_client_path%>
 <table>
     <tr>
         <th>Name</th>
