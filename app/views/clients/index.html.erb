@@ -1,33 +1,42 @@
 <h1>Listing Clients</h1>
-<%= link_to'New Client', new_client_path%>
 <% if current_user %>
       Logged in as <%= current_user.name%>
-     <%=button_to "Logout", logout_path, :id => "logoutbtn" %>
+     <%= link_to "Logout", sessions_destroy_path, :id => "logoutbtn" %>
 <% end %>
+
+<br><br><%= link_to'New Client', new_client_path%>
 <table>
     <tr>
         <th>Name</th>
         <th>Case Descritpion</th>
     </tr>
     <% @client.each do |client| %>
-    <tr>
-        <td><%= link_to client.Name, client_path(client) %></td>
-        <td><%= client.Case_Description %></td>
-         
+        <% if client.user == current_user %>
+            <tr>
+       
+                <td><%= link_to client.Name, client_path(client) %></td>
+                <td><%= client.Case_Description %></td>
+                <td><% if client.user %>
+                        <%= client.user.name %>
+                    <% end %>
+        
+                </td>
      
-    </tr>
+            </tr>
+        <% end %>   
     <%end%>
  </table>
 
     
-<!--Still Need to figure out had to add the Bill List-->
+
     
 <h1>Listing Bills</h1>
     
     <% @client.each do |client| %>
    
+    <% if client.user == current_user %>
         <%= render client.bills %>
-     
+    <% end %>
     
     <%end%>
  

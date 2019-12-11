@@ -19,10 +19,11 @@
     </div>
     <div class="actions">
        <%= submit_tag "Login", :id => "loginbtn" %>
+       
     </div>
      <% if current_user %>
       Logged in as <%= current_user.name%>
-     <%=button_to "Logout", logout_path %>
+     <%= link_to "Logout" , logout_path %>
     <% else %>
      
       <%= link_to "Sign Up", signup_path %>
