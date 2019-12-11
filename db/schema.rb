@@ -17,13 +17,8 @@ ActiveRecord::Schema.define(version: 2019_11_30_010656) do
     t.string "address"
     t.date "date"
     t.text "description"
-<<<<<<< HEAD
-    t.string "rate"
-    t.string "hours"
-=======
     t.decimal "rate"
     t.integer "hours"
->>>>>>> Luis
     t.integer "client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
