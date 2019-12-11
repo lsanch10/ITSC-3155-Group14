@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2019_11_30_010656) do
     t.string "Address"
     t.string "Phone_Number"
     t.string "Email"
-    t.string "Court_Date"
+    t.date "Court_Date"
     t.text "Case_Description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
