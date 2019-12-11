@@ -1,7 +1,8 @@
 class Client < ApplicationRecord
     belongs_to :user
     
-    has_many :bills
+    has_many :bills, dependent: :destroy
+    
     validates :Name, presence: true, length: { minimum: 1 }
     validates :Address, presence: true, length: { minimum: 5 }
     validates :Phone_Number, presence: true, length: { minimum: 10 }

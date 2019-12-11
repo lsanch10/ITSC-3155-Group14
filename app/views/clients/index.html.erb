@@ -1,10 +1,13 @@
-<h1>Listing Clients</h1>
+
+<%= link_to 'Account Settings',user_path(current_user) %>
 <% if current_user %>
       Logged in as <%= current_user.name%>
      <%= link_to "Logout", sessions_destroy_path, :id => "logoutbtn" %>
 <% end %>
+<h1>Listing Clients</h1>
 
-<br><br><%= link_to'New Client', new_client_path%>
+
+<br><br><%= link_to'New Client', new_client_path%><br><br>
 <table>
     <tr>
         <th>Name</th>
@@ -36,6 +39,7 @@
    
     <% if client.user == current_user %>
         <%= render client.bills %>
+        
     <% end %>
     
     <%end%>

@@ -1,6 +1,6 @@
 <p>
     <strong>Name:</strong>
-    <%= bill.name %>
+    <%= link_to bill.name, client_bill_url(bill.client, bill)%>
 </p>
 
 <p>
@@ -12,12 +12,9 @@
     <strong>Total:</strong>
     <%= bill.Total %>
 </p>
+<br>
 
 
-<p>
-    <%= link_to 'Delete Bill ', [bill.client, bill],
-                 method: :delete,
-                 data: {confirm: 'Are you sure?'} %>
-</p>
+
 
    

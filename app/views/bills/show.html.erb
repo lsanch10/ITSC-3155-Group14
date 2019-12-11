@@ -1,0 +1,50 @@
+<h1>Bill</h1>
+
+<p>
+   <strong>Name:</strong>
+   <%= @bill.name %>
+    
+</p>
+<p>
+   <strong> Bill ID:</strong>
+   <%= @bill.id %>
+    
+</p>
+<p>
+   <strong> Address:</strong>
+   <%= @bill.address%>
+    
+</p>
+<p>
+   <strong> Date:</strong>
+   <%= @bill.date%>
+    
+</p>
+
+<p>
+    <strong>Bill Desription:</strong>
+    <%= @bill.description %>
+</p>
+
+<p>
+   <strong> Rate:$</strong>
+   <%= @bill.rate%>
+    
+</p>
+<p>
+   <strong> Hours:</strong>
+   <%= @bill.hours%>
+    
+</p>
+
+
+
+
+<p>
+    <strong>Total:$</strong>
+    <%= @bill.Total %>
+</p>
+<%= link_to 'Edit', edit_client_bill_url(@bill.client) %><br>
+ <%= link_to 'Delete Bill ', client_bill_path(@bill.client),
+                 method: :delete,
+                 data: {confirm: 'Your Bill will be permenantly deleted do you wish to continue?'} %>

@@ -6,7 +6,7 @@
 <p>
     <strong>Court Date:</strong>
     <%= @client.Court_Date %>
-</p>
+</p
 <p>
     <strong>Case Description:</strong>
     <%= @client.Case_Description %>
@@ -14,7 +14,7 @@
 <%= link_to 'Edit', edit_client_path(@client) %><br>
 <%= link_to 'Delete', client_path(@client),
                       method: :delete,
-                      data: { confirm: 'Your Client will be permenantly deleted do you wish to continue' } %><br>
+                      data: { confirm: 'Your Client will be permenantly deleted do you wish to continue?' } %><br>
 <%= link_to 'Client List', clients_path %><br><br>
 
 

@@ -1,7 +1,8 @@
-<h1>New Bill</h1>
-
-<%= form_for :bill, url: client_bills_path do |f| %>
-<% if @bill.errors.any? %>
+<h1>Editing Bill</h1>
+ 
+<%= form_for :bill, url: client_bill_path(@bill.client), method: :patch do |f| %>
+ 
+  <% if @bill.errors.any? %>
     <div id="error_explanation">
       <h2>
         <%= pluralize(@bill.errors.count, "error") %> prohibited
@@ -14,7 +15,6 @@
       </ul>
     </div>
   <% end %>
- 
   <p>
     <%= f.label :name %><br>
      <%= f.text_field :name  %>
@@ -47,5 +47,5 @@
   <p>
     <%= f.submit %>
   </p>
- 
 <% end %>
+  <%= link_to 'Cancel', clients_path %>
