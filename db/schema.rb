@@ -12,8 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_11_30_010656) do
 
-
-  create_table "bills", force: :cascade do |t|
+   create_table "bills", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.date "date"
@@ -25,7 +24,6 @@ ActiveRecord::Schema.define(version: 2019_11_30_010656) do
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_bills_on_client_id"
   end
-
 
   create_table "clients", force: :cascade do |t|
     t.string "Name"
