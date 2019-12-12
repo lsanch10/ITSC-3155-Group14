@@ -1,14 +1,140 @@
 // Place all the styles related to the Clients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#logout_path{
-   background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 15%; 
+// #logout_path{
+//   background-color: #4CAF50;
+//   color: white;
+//   padding: 14px 20px;
+//   margin: 8px 0;
+//   border: none;
+//   cursor: pointer;
+//   width: 15%; 
     
+    
+// }
+#cancel_btn {
+  height: 38px;
+  width:10%;
+  background-color: #D3D3D3; /* Green */
+  
+  color: white;
+  
+  font-size: 16px;
+padding-left: 20px;
+    padding-right: 20px;
+  
+}
+
+#new_btn {
+  height: 38px;
+  width:10%;
+  background-color: #4CAF50; /* Green */
+  
+  color: white;
+  
+  font-size: 16px;
+padding-left: 20px;
+    padding-right: 20px;
+  
+}
+
+#delete_btn {
+  height: 38px;
+  width:10%;
+  background-color: #F08080; /* red */
+  
+  color: white;
+  
+  font-size: 16px;
+padding-left: 20px;
+    padding-right: 20px;
+  
+}
+
+#edit_btn {
+  height: 38px;
+  width:10%;
+  background-color: #87CEFA; /* blue */
+  
+  color: white;
+  
+  font-size: 16px;
+padding-left: 20px;
+    padding-right: 20px;
+  
+}
+
+table{
+    text-decoration: none;
+}
+#logoutbtn{
+    text-align: center;
+    text-decoration: none !important;
+    
+}
+// this is the tab css code
+.tab{
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1; 
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color:black;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+// CSS for the client table
+#customers{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:#C0C0C0;
+  color: white;
+}
+textarea{
+    width:70%;
+    height: 200px;
+    padding: 12px 12px;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+    resize: none;
     
 }

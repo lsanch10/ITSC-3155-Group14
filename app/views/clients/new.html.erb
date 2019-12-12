@@ -17,33 +17,33 @@
 
   <p>
     <%= f.label :Name %><br>
-    <%= f.text_field :Name %>
+    <%= f.text_field :Name, placeholder: "Enter client name..." %>
   </p>
  
  <p>
     <%= f.label :Address %><br>
-    <%= f.text_field :Address %>
+    <%= f.text_field :Address, placeholder: "Enter client address..." %>
   </p>
   <p>
     <%= f.label :Phone_Number %><br>
-    <%= f.text_field :Phone_Number %>
+    <%= f.text_field :Phone_Number, placeholder: "Enter client number..." %>
   </p>
   <p>
     <%= f.label :Email %><br>
-    <%= f.text_field :Email %>
+    <%= f.text_field :Email, placeholder: "Enter client name.." %>
   </p>
   <p>
      <p>
     <%= f.label :Court_Date %><br>
-    <%= f.text_field :Court_Date %>
+    <%= f.text_field :Court_Date, placeholder: "YYYY-DD-MM" %>
   </p>
   <p> 
     <%= f.label :Case_Description %><br>
-    <%= f.text_area :Case_Description %>
+    <%= f.text_area :Case_Description , placeholder: "Enter Description..."%>
   </p>
   
   <p>
     <%= f.submit %>
   </p>
 <% end %>
-  <%= link_to 'Cancel', clients_path %>
+  <%= link_to '<button id="cancel_btn" type="button">Cancel</button>'.html_safe, clients_path %>

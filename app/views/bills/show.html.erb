@@ -44,7 +44,8 @@
     <strong>Total:$</strong>
     <%= @bill.Total %>
 </p>
-<%= link_to 'Edit', edit_client_bill_url(@bill.client) %><br>
- <%= link_to 'Delete Bill ', client_bill_path(@bill.client),
+<%= link_to '<button id="edit_btn" type="button">Edit</button>'.html_safe, edit_client_bill_url(@bill.client) %>
+ <%= link_to '<button id="delete_btn" type="button">Delete</button>'.html_safe, client_bill_path(@bill.client),
                  method: :delete,
                  data: {confirm: 'Your Bill will be permenantly deleted do you wish to continue?'} %>
+<%= link_to '<button id="cancel_btn" type="button">Back</button>'.html_safe, clients_path %>

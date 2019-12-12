@@ -1,6 +1,23 @@
+<h1>Client</h1>
+
+
 <p>
     <strong>Name:</strong>
     <%= @client.Name %>
+</p>
+
+<p>
+    <strong>Address:</strong>
+    <%= @client.Address %>
+</p>
+
+<p>
+    <strong>Phone Number:</strong>
+    <%= @client.Phone_Number %>
+</p>
+<p>
+    <strong>Email:</strong>
+    <%= @client.Email %>
 </p>
 
 <p>
@@ -11,19 +28,27 @@
     <strong>Case Description:</strong>
     <%= @client.Case_Description %>
 </p>
-<%= link_to 'Edit', edit_client_path(@client) %><br>
-<%= link_to 'Delete', client_path(@client),
+<%= link_to '<button id="edit_btn" type="button">Edit</button>'.html_safe, edit_client_path(@client) %>
+<%= link_to '<button id="delete_btn" type="button">Delete</button>'.html_safe, client_path(@client),
                       method: :delete,
                       data: { confirm: 'Your Client will be permenantly deleted do you wish to continue?' } %><br>
-<%= link_to 'Client List', clients_path %><br><br>
+<br><br>
 
 
 
-<%= link_to 'New Bill', new_client_bill_path(@client) %>
+<%= link_to '<button id="new_btn" type="button">New Bill</button>'.html_safe, new_client_bill_path(@client) %>
 
    
 <h2>Bills</h2>
-<%= render @client.bills %>
+<table id="customers">
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Total</th>
+    </tr>
+    <%= render @client.bills %>
+    
+</table>
 
- 
-
+<br><br>
+<%= link_to '<button id="cancel_btn" type="button">Back</button>'.html_safe, clients_path %>

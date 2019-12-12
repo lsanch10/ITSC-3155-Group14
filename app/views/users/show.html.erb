@@ -10,6 +10,6 @@
   <%= @user.email %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Back', clients_path %>
+<%= link_to '<button id="edit_btn" type="button">Edit</button>'.html_safe, edit_user_path(@user) %>
+<%= link_to '<button id="delete_btn" type="button">Delete User</button>'.html_safe, @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to '<button id="cancel_btn" type="button">Back</button>'.html_safe, clients_path %>

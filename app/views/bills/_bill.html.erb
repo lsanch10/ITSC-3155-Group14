@@ -1,20 +1,11 @@
-<p>
-    <strong>Name:</strong>
-    <%= link_to bill.name, client_bill_url(bill.client, bill)%>
-</p>
-
-<p>
-    <strong>Date:</strong>
-    <%= bill.date %>
-</p>
-
-<p>
-    <strong>Total:</strong>
-    <%= bill.Total %>
-</p>
-<br>
 
 
+            <tr>
+                <td><%= link_to bill.name, client_bill_url(bill.client, bill)%></td>
+                <td><%= bill.date %></td>
+                <td><%= bill.Total %></td>
+            </tr>
+ 
 
 
    
