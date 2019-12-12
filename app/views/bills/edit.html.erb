@@ -1,0 +1,51 @@
+<h1>Editing Bill</h1>
+ 
+<%= form_for :bill, url: client_bill_path(@bill.client), method: :patch do |f| %>
+ 
+  <% if @bill.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@bill.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @bill.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+     <%= f.text_field :name  %>
+   
+  </p>
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </p>
+  
+ 
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :rate %><br>
+    <%= f.text_field :rate %>
+  </p>
+  <p>
+    <%= f.label :hours %><br>
+    <%= f.text_field :hours %>
+  </p>
+  
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+  <%= link_to '<button id="cancel_btn" type="button">Cancel</button>'.html_safe, clients_path %>
